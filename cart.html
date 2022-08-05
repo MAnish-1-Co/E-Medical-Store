@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- https://fontawesome.com/v4/icon/cart-arrow-down -->
+<!-- <i class="fa fa-cart-arrow-down" aria-hidden="true"></i> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">      
+        <a href="a" ><img src="img/logo.png" class="logo"></a>
+        <div id="search" class="found">
+            <input type="text" placeholder="Seach the Medical Products">
+            <img src="Img/search.jpg">
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a id="lg-bag" class="active" href="cart.html"><i class="fa fa-cart-arrow-down fa-lg"
+                            aria-hidden="true">cart</i></a></li>
+                <a id="close" href="#"><i class="fa fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fa fa-bars"></i>
+            <a href="cart.html"><i class="fa fa-cart-arrow-down"></i></a>
+        </div>
+    </section>
+    <section id="page-header">
+        <h2>CART</h2>
+        <p>Save more with coupouns upto 70% off</p>
+        <!-- <a href="a"><img src="img/hero.jpg" class="lo"></a> -->
+    </section>
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"></a><i class="fa fa-times fa-lg" aria-hidden="true"></i></td>
+                    <td><img src="Img/Medicine List/syrup.jpg" alt=""></td>
+                    <td>Syrup</td>
+                    <td>$21</td>
+                    <td><input type="number" value="1"></input></td>
+                    <td>$23</td>
+                </tr>
+                <tr>
+                    <td><a href="#"></a><i class="fa fa-times fa-lg" aria-hidden="true"></i></td>
+                    <td><img src="Img/Medicine List/move.jpg" alt=""></td>
+                    <td>Moov</td>
+                    <td>$27</td>
+                    <td><input type="number" value="1"></input></td>
+                    <td>$33</td>
+                </tr>
+                <tr>
+                    <td><a href="#"></a><i class="fa fa-times fa-lg" aria-hidden="true"></i></td>
+                    <td><img src="Img/Medicine List/eardrop.jpg" alt=""></td>
+                    <td>Ear Drop</td>
+                    <td>$17</td>
+                    <td><input type="number" value="1"></input></td>
+                    <td>$22</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter your Coupon" >
+                <button class="white">Apply</button>
+            </div>
+        </div>
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>$355</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>$335</strong></td>
+                </tr>
+            </table>
+            <button class="white">Proceed to Check Out</button>
+        </div>
+    </section>
+    <hr>
+    <footer class="footer">
+        <div class="col">
+            <img src="Img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>Near DVM Public School,Kulesara Gr. Noida</p>
+            <p><strong>Phone:</strong>+01 2222 345/ 0120-6845</p>
+            <div class="follow">
+                <h4>Follow US</h4>
+                <div class="icon">
+                    <i class="fa fa-facebook-f fa-2x"></i>
+                    <i class="fa fa-twitter fa-2x"></i>
+                    <i class="fa fa-instagram fa-2x"></i>
+                    <i class="fa fa-pinterest-p fa-2x"></i>
+                    <i class="fa fa-youtube fa-2x"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Whislist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="Img/Follow/appstore.png">
+                <img src="Img/Follow/googleplay.jpg">
+            </div class="row">
+            <p>Secured Payments Gateway</p>
+            <img src="Img/Follow/payment.png">
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2022 Techopedia Inc. - Terms of Use - Privacy Policy - Editorial Review Policy</p>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Form Validation</title>
+    <style>
+        body{
+            padding:10px 50px;
+        }
+        .formdesign{
+            font-size: 20px;
+
+        }
+        .formdesign input{
+            width: 50%;
+            padding:10px 20px;
+            border:1px solid blue;
+            margin: 14px;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        .formerror{
+            color:red;
+        }
+        .btn{
+            border-radius: 9px;
+            width:80px;
+            height:30px;
+            margin:22px 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Registration Page</h1>
+    <form acion="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+        <div class="formdesign" id="name">
+            Name<input type="text" name="fname" required><b><span class="formerror"></span></b>
+        </div>
+        <div class="formdesign" id="email">
+            Email<input type="email" name="femail"><b><span class="formerror" required></span></b>
+        </div>
+        <div class="formdesign" id="phone">
+            Phone<input type="phone" name="fphone"><b><span class="formerror" required></span></b>
+        </div>
+        <div class="formdesign" id="pass">
+            Password<input type="password" name="fpass"><b><span class="formerror" required></span></b>
+        </div>
+        <div class="formdesign" id="cpass">
+            Confirm Password<input type="password" name="fcpass"><b><span class="formerror" required></span></b>
+        </div>
+        <input class="btn" type="submit" value="submit">
+    </form>
+
+</body>
+<script>
+    function clearErrors(){
+        errors=document.getElementsByClassName('formerror');
+        for(let item of errors){
+            item.innerHTML="";
+        }
+    }
+    function seterror(id,error){
+        element=document.getElementById(id);
+        element.getElementsByClassName('formerror')[0].innerHTML=error;
+    }
+    function validateForm(){
+        var returnval=true;
+        clearError();
+        var name=document.forms['myForm']['fname'].value;
+        if(name.length<5){
+            seterror("name","*Short name");
+            returnval=false;
+        }
+        if(name.length==0){
+            seterror("name","*Empty name");
+            returnval=false;
+        }
+        var email=document.forms['myForm']['femail'].value;
+        if(email.length>15){
+            seterror("email","*Too LONG EMAIL");
+            returnval=false;
+        }
+        var phone=document.forms['myForm']['fphone'].value;
+        if(email.length>10){
+            seterror("phone","*NOt more than 10 digits");
+            returnval=false;
+        }
+        var password=document.forms['myForm']['fpass'].value;
+        if(password<6){
+            seterror("pass","*Password should be at least 6character long");
+            returnval=false;
+        }
+        var cpassword=document.forms['myForm']['fcpass'].value;
+        if(cpassword!=password){
+            seterror("cpass","Psswoed not match");
+            returnval=false;
+        }
+    }
+</script>
+</html>
